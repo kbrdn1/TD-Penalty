@@ -12,4 +12,9 @@ describe("Séance de Tirs au But", () => {
   test("initialScore devrait être 0/0", () => {
     expect(initialScore).toEqual({ teamA: 0, teamB: 0 });
   });
+
+  test("randomShot devrait retourner un booléen", () => {
+    expect(typeof randomShot()).toBe("boolean");
+  });
+
 });

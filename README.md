@@ -3,13 +3,35 @@
 ## 📚 Programmation Fonctionnelle
 
 ### 📋 Table des Matières
-1. [Modalités de réalisation](#-modalités-de-réalisation)
-2. [Critères d'évaluation](#-critères-dévaluation)
-3. [Modalités de rendu](#-modalités-de-rendu)
-4. [Objectifs](#-objectifs)
-5. [Logique](#-logique)
-6. [Travail à réaliser](#-travail-à-réaliser)
-7. [Installation et Exécution](#-installation-et-exécution)
+1. [Installation et Exécution](#-installation-et-exécution)
+2. [Modalités de réalisation](#-modalités-de-réalisation)
+3. [Critères d'évaluation](#-critères-dévaluation)
+4. [Modalités de rendu](#-modalités-de-rendu)
+5. [Objectifs](#-objectifs)
+6. [Logique](#-logique)
+7. [Travail à réaliser](#-travail-à-réaliser)
+
+### 💻 Installation et Exécution
+
+Pour installer les dépendances :
+
+```bash
+bun install
+```
+
+Pour exécuter :
+
+```bash
+bun run index.ts
+```
+
+Pour tester :
+
+```bash
+bun test
+```
+
+Ce projet a été créé en utilisant `bun init` dans bun v1.1.39. [Bun](https://bun.sh) est un runtime JavaScript rapide tout-en-un.
 
 ### 🛠️ Modalités de réalisation
 
@@ -79,25 +101,3 @@ si le tir au but est marqué, le score de l'équipe augmente d'une unité.
 - Faites en sorte que votre programme se répète tant que la séance de tirs au but n'a pas permis de déterminer un vainqueur. Pour ce faire, programmez une fonction récursive.
 - Employez l'historique de la séance de tirs au but (obtenu ou généré) afin de tester votre programme en rejouant une partie depuis le début ou à partir d'un moment choisi.
 - Implémentez des tests unitaires permettant de valider chaque fonction de votre programme. Une approche Test-Driven Development est recommandée.
-
-### 💻 Installation et Exécution
-
-Pour installer les dépendances :
-
-```bash
-bun install
-```
-
-Pour exécuter :
-
-```bash
-bun run index.ts
-```
-
-Pour tester :
-
-```bash
-bun test
-```
-
-Ce projet a été créé en utilisant `bun init` dans bun v1.1.39. [Bun](https://bun.sh) est un runtime JavaScript rapide tout-en-un.

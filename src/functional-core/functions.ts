@@ -34,3 +34,10 @@ export const displayHistory = (history: History): void => {
   });
 };
 
+export const checkWinner = (score: Score, shots: number): string | null => {
+  if (shots >= 5) {
+    if (score.teamA > score.teamB) return "Équipe A";
+    if (score.teamB > score.teamA) return "Équipe B";
+  }
+  return null;
+};

@@ -17,4 +17,13 @@ describe("Séance de Tirs au But", () => {
     expect(typeof randomShot()).toBe("boolean");
   });
 
+  test("updateScore devrait mettre à jour le score correctement", () => {
+    let score: Score = { teamA: 0, teamB: 0 };
+    
+    score = updateScore(score, "A", true);
+    expect(score).toEqual({ teamA: 1, teamB: 0 });
+    
+    score = updateScore(score, "B", false);
+    expect(score).toEqual({ teamA: 1, teamB: 0 });
+  });
 });

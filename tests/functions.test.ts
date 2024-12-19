@@ -26,4 +26,12 @@ describe("Séance de Tirs au But", () => {
     score = updateScore(score, "B", false);
     expect(score).toEqual({ teamA: 1, teamB: 0 });
   });
+
+  test("addHistory devrait ajouter une nouvelle entrée à l'historique", () => {
+    let history: History = [];
+    const score: Score = { teamA: 1, teamB: 0 };
+    
+    history = addHistory(history, 1, score, true, "A");
+    expect(history).toEqual([{ shot: 1, score, result: "Équipe A : +1" }]);
+  });
 });

@@ -26,7 +26,7 @@ const simulatePenaltyShootout = (): void => {
   }
 
   displayHistory(history);
-  console.log(`Victoire : ${winner} (Score : ${score.teamA}/${score.teamB})`);
+  console.log(`🏆 Victoire : ${winner} (Score : ${score.teamA} / ${score.teamB})`);
 };
 
 simulatePenaltyShootout();

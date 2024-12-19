@@ -21,23 +21,23 @@ export const addHistory = (
 ): History => {
   const resultStr =
     team === "A"
-      ? `Équipe A : ${result ? "+1" : "0"}`
-      : `Équipe B : ${result ? "+1" : "0"}`;
+      ? `Équipe 🅰️ : ${result ? "+1" : "0"}`
+      : `Équipe 🅱️ : ${result ? "+1" : "0"}`;
   return [...history, { shot, score, result: resultStr }];
 };
 
 export const displayHistory = (history: History): void => {
   history.forEach(({ shot, score, result }) => {
     console.log(
-      `Tir ${shot} : Score : ${score.teamA}/${score.teamB} (${result})`,
+      `⚽ Tir ${shot} : Score : ${score.teamA}/${score.teamB} (${result})`,
     );
   });
 };
 
 export const checkWinner = (score: Score, shots: number): string | null => {
   if (shots >= 5) {
-    if (score.teamA > score.teamB) return "Équipe A";
-    if (score.teamB > score.teamA) return "Équipe B";
+    if (score.teamA > score.teamB) return "Équipe 🅰️";
+    if (score.teamB > score.teamA) return "Équipe 🅱️";
   }
   return null;
 };

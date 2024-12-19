@@ -34,4 +34,15 @@ describe("Séance de Tirs au But", () => {
     history = addHistory(history, 1, score, true, "A");
     expect(history).toEqual([{ shot: 1, score, result: "Équipe A : +1" }]);
   });
+
+  test("checkWinner devrait retourner le gagnant correctement", () => {
+    let score: Score = { teamA: 3, teamB: 2 };
+    expect(checkWinner(score, 5)).toBe("Équipe A");
+    
+    score = { teamA: 2, teamB: 3 };
+    expect(checkWinner(score, 5)).toBe("Équipe B");
+    
+    score = { teamA: 2, teamB: 2 };
+    expect(checkWinner(score, 5)).toBeNull();
+  });
 });

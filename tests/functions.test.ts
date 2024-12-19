@@ -9,4 +9,7 @@ import {
 import type { History, Score } from "../src/functional-core/types";
 
 describe("Séance de Tirs au But", () => {
+  test("initialScore devrait être 0/0", () => {
+    expect(initialScore).toEqual({ teamA: 0, teamB: 0 });
+  });
 });

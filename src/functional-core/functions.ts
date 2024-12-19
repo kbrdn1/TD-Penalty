@@ -25,3 +25,12 @@ export const addHistory = (
       : `Équipe B : ${result ? "+1" : "0"}`;
   return [...history, { shot, score, result: resultStr }];
 };
+
+export const displayHistory = (history: History): void => {
+  history.forEach(({ shot, score, result }) => {
+    console.log(
+      `Tir ${shot} : Score : ${score.teamA}/${score.teamB} (${result})`,
+    );
+  });
+};
+

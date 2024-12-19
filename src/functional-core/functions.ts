@@ -1,5 +1,5 @@
-type NumberToNumberFn = (x: number) => number;
+import type { History, Score } from "./types";
 
-const increment: NumberToNumberFn = (x: number) => x + 1;
+export const initialScore: Score = { teamA: 0, teamB: 0 };
+export const randomShot = (): boolean => Math.random() < 0.5;
 
-export { increment, type NumberToNumberFn };

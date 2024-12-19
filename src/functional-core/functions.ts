@@ -34,10 +34,25 @@ export const displayHistory = (history: History): void => {
   });
 };
 
-export const checkWinner = (score: Score, shots: number): string | null => {
-  if (shots >= 5) {
-    if (score.teamA > score.teamB) return "Équipe 🅰️";
-    if (score.teamB > score.teamA) return "Équipe 🅱️";
-  }
+export const checkWinner = (
+  score: Score,
+  shots: number,
+  history: History,
+): string | null => {
+  const lead = Math.abs(score.teamA - score.teamB);
+
+  if (shots >= 5 && lead === 1) {
+    const [lastScore, secondLastScore] = history
+      .slice(-2)
+      .map((history) => history.score);
+
+    if (
+      lastScore.teamA === secondLastScore.teamA &&
+      lastScore.teamB === secondLastScore.teamB
+    )
+      return score.teamA > score.teamB ? "Équipe 🅰️" : "Équipe 🅱️";
+  } else if (shots < 5 && lead >= 2)
+    return score.teamA > score.teamB ? "Équipe 🅰️" : "Équipe 🅱️";
+
   return null;
 };

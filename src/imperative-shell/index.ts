@@ -20,7 +20,7 @@ const simulatePenaltyShootout = (): void => {
 
     score = updateScore(score, team, result);
     history = addHistory(history, shots + 1, score, result, team);
-    winner = checkWinner(score, shots + 1);
+    winner = checkWinner(score, shots + 1, history);
 
     shots++;
   }
